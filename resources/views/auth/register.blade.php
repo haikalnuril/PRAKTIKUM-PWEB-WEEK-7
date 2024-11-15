@@ -19,6 +19,20 @@
             @enderror
         </div>
         <div class="flex flex-col mb-5">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+            @error("email")
+                <p class="text-red-600">{{ $message }}</p>
+            @enderror
+        </div>
+        <div class="flex flex-col mb-5">
+            <label for="phone">Phone</label>
+            <input type="text" name="phone" id="phone" required>
+            @error("phone")
+                <p class="text-red-600">{{ $message }}</p>
+            @enderror
+        </div>
+        <div class="flex flex-col mb-5">
             <label for="username">Username</label>
             <input type="text" name="username" id="username" required>
             @error("username")

@@ -16,6 +16,11 @@ return new class extends Migration
             $table->string('name');
             $table->string('username')->unique();
             $table->string('password');
+
+            $table->foreignId('user_id');
+
+            // $table->unsignedBigInteger("orang_id");
+            // $table->foreign("orang_id")->references("id")->on("users");
             $table->timestamps();
         });
     }
